@@ -20,14 +20,18 @@ CREATE TABLE Books (
     FOREIGN KEY (author_id) REFERENCES Authors(author_id)
 );
 
+
+USE alx_book_store;
+
+
 CREATE TABLE Customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(100) NOT NULL,
-    last_name VARCHAR(100) NOT NULL,
-    email VARCHAR(150) UNIQUE NOT NULL,
+    customer_name VARCHAR(215) NOT NULL,
+    email VARCHAR(215) NOT NULL,
     phone_number VARCHAR(20),
     address TEXT
 );
+
 
 CREATE TABLE Orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
